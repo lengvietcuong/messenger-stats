@@ -50,4 +50,4 @@ class DataViewer:
         print(f"\n{EMOJIS["account"]} {conversation_name}")
         for key, value in self.data[conversation_name].items():
             print(f"\n{EMOJIS[key]} {key}")
-            print(tabulate(value.items(), tablefmt="fancy_grid"))
+            print(tabulate(value.items(), tablefmt="fancy_grid", intfmt=","))
