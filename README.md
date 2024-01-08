@@ -5,7 +5,7 @@ This project was inspired by https://github.com/KMChris/messenger-counter.
 
 ## Installation
 Clone the repository:
-```bash``
+```bash
 git clone https://github.com/lengvietcuong/messenger-stats.git
 ```
 Install requirements using
