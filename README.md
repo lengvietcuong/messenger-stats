@@ -14,12 +14,15 @@ pip install -r requirements.txt
 ```
 
 ## How to download your Facebook Messenger data
-1. Go to https://www.facebook.com and click on your profile (top-right).
-2. Click `Settings & privacy`, then `Settings`.
-3. Scroll down and click `Download your information`.
-4. Select only `Messages` to download.
-5. Select the `JSON` file format (default is HTML).
-6. Submit the download request and download when available.
+1. Go to https://accountscenter.facebook.com/info_and_permissions/dyi.
+2. Click `Download or transfer information` → `Specific types of information`.
+3. Click `Messages` → `Next` → `Download to device`.
+4. Click `Date range`, select `All time`, then `Save`.
+5. Click `Format`, select `JSON`, then `Save`.
+6. Click `Media quality`, select `Low`, then `Save` (to reduce file sizes for images and videos).
+7. Click `Create files`. You will be notified when they are available for download.
+
+**Note**: Facebook recently introduced end-to-end encryption for Messenger, and only messages sent before this change can be downloaded.
 
 ## Usage
 1. Move your downloaded data files to the `data` folder in the project directory (no need to unzip)

@@ -146,8 +146,9 @@ class MessageCounter:
 
         inbox_path = data_file / "your_facebook_activity" / "messages" / "inbox"
         archived_path = data_file / "your_facebook_activity" / "messages" / "archived_threads"
+        e2ee_cutover_path = data_file / "your_facebook_activity" / "messages" / "e2ee_cutover"
 
-        for conversation_folder in chain(inbox_path.iterdir(), archived_path.iterdir()):
+        for conversation_folder in chain(inbox_path.iterdir(), archived_path.iterdir(), e2ee_cutover_path.iterdir()):
             self._process_conversation(conversation_folder)
 
     def process_files(self) -> None:
