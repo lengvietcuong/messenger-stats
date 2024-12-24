@@ -56,7 +56,7 @@ class MessageCounter:
             self.conversation_count["chars"][sender_name] += len(message["content"])
 
         for reaction in message.get("reactions", []):
-            _, actor = reaction.values()
+            actor = reaction["actor"]
             actor = self._format_string(actor)
             self.conversation_count["reactions"]["Total"] += 1
             self.conversation_count["reactions"][actor] += 1
@@ -144,8 +144,8 @@ class MessageCounter:
             self._extract_and_delete_zip(data_file)
             data_file = data_file.with_suffix("")
 
-        inbox_path = data_file / "messages" / "inbox"
-        archived_path = data_file / "messages" / "archived_threads"
+        inbox_path = data_file / "your_facebook_activity" / "messages" / "inbox"
+        archived_path = data_file / "your_facebook_activity" / "messages" / "archived_threads"
 
         for conversation_folder in chain(inbox_path.iterdir(), archived_path.iterdir()):
             self._process_conversation(conversation_folder)
